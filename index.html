@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comercializadora Nuevo Sol | Productos de Importación</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#inicio" class="brand">
+        <span class="brand-sol">☀</span>
+        <span class="brand-text">Nuevo <strong>Sol</strong></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-overlay"></div>
+    <img src="images/hero.png" alt="Comercializadora Nuevo Sol" class="hero-bg-img" />
+    <div class="container hero-content">
+      <p class="hero-tag">Productos de Importación</p>
+      <h1 class="hero-title">Calidad que<br /><span class="gold">ilumina</span> tu negocio</h1>
+      <p class="hero-sub">Distribuidor mayorista de productos importados al mejor precio.<br />Legumbres, jugos, artículos del hogar y más.</p>
+      <div class="hero-ctas">
+        <a href="#productos" class="btn btn-primary">Ver catálogo</a>
+        <a href="#contacto" class="btn btn-outline">Contactar</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>↓</span>
+    </div>
+  </section>
+
+  <!-- CATEGORÍAS RÁPIDAS -->
+  <section class="categories">
+    <div class="container categories-grid">
+      <div class="cat-card" onclick="scrollToCategory('legumbres')">
+        <span class="cat-icon">🌾</span>
+        <span>Legumbres</span>
+      </div>
+      <div class="cat-card" onclick="scrollToCategory('jugos')">
+        <span class="cat-icon">🧃</span>
+        <span>Jugos</span>
+      </div>
+      <div class="cat-card" onclick="scrollToCategory('hogar')">
+        <span class="cat-icon">🧴</span>
+        <span>Hogar</span>
+      </div>
+      <div class="cat-card" onclick="scrollToCategory('despensa')">
+        <span class="cat-icon">🍬</span>
+        <span>Despensa</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTOS -->
+  <section class="products-section" id="productos">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Catálogo 2024</p>
+        <h2 class="section-title">Nuestros Productos</h2>
+        <p class="section-sub">Precios mayoristas, stock permanente. Todos los precios son + IVA.</p>
+      </div>
+
+      <!-- LEGUMBRES -->
+      <div class="product-category" id="legumbres">
+        <h3 class="cat-title"><span class="cat-dot"></span> Legumbres</h3>
+        <div class="product-grid">
+
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="images/legumbre_1.png" alt="Legumbre 390g" loading="lazy" />
+              <div class="product-badge">Importado</div>
+            </div>
+            <div class="product-info">
+              <h4>Legumbres</h4>
+              <p class="product-desc">Formato 390g — calidad premium de importación</p>
+              <div class="product-footer">
+                <span class="product-price">$620 <small>+ IVA</small></span>
+                <a href="#contacto" class="btn-buy">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="images/legumbre_2.png" alt="Legumbre 390g" loading="lazy" />
+              <div class="product-badge">Importado</div>
+            </div>
+            <div class="product-info">
+              <h4>Legumbres</h4>
+              <p class="product-desc">Formato 390g — calidad premium de importación</p>
+              <div class="product-footer">
+                <span class="product-price">$620 <small>+ IVA</small></span>
+                <a href="#contacto" class="btn-buy">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="images/legumbre_3.png" alt="Legumbre 390g" loading="lazy" />
+              <div class="product-badge">Importado</div>
+            </div>
+            <div class="product-info">
+              <h4>Legumbres</h4>
+              <p class="product-desc">Formato 390g — calidad premium de importación</p>
+              <div class="product-footer">
+                <span class="product-price">$620 <small>+ IVA</small></span>
+                <a href="#contacto" class="btn-buy">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="images/legumbre_4.png" alt="Legumbre 390g" loading="lazy" />
+              <div class="product-badge">Importado</div>
+            </div>
+            <div class="product-info">
+              <h4>Legumbres</h4>
+              <p class="product-desc">Formato 390g — calidad premium de importación</p>
+              <div class="product-footer">
+                <span class="product-price">$620 <small>+ IVA</small></span>
+                <a href="#contacto" class="btn-buy">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- JUGOS -->
+      <div class="product-category" id="jugos">
+        <h3 class="cat-title"><span class="cat-dot"></span> Jugos</h3>
+        <div class="product-grid">
+
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="images/jugos_rikito_250ml.png" alt="Jugo Rikito 250ml" loading="lazy" />
+              <div class="product-badge">Importado</div>
+            </div>
+            <div class="product-info">
+              <h4>Jugo Rikito</h4>
+              <p class="product-desc">Formato 250 ml — refrescante y natural</p>
+              <div class="product-footer">
+                <span class="product-price">$220 <small>+ IVA</small></span>
+                <a href="#contacto" class="btn-buy">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="images/jugos_rikito_1lt.png" alt="Jugo Rikito 1 litro" loading="lazy" />
+              <div class="product-badge">Importado</div>
+            </div>
+            <div class="product-info">
+              <h4>Jugo Rikito</h4>
+              <p class="product-desc">Formato 1 litro — ideal para el hogar</p>
+              <div class="product-footer">
+                <span class="product-price">$690 <small>+ IVA</small></span>
+                <a href="#contacto" class="btn-buy">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="images/jugos_bebah.png" alt="Jugo Bebah" loading="lazy" />
+              <div class="product-badge">Importado</div>
+            </div>
+            <div class="product-info">
+              <h4>Jugo Bebah</h4>
+              <p class="product-desc">Bebida premium de importación — gran sabor</p>
+              <div class="product-footer">
+                <span class="product-price">$1.450 <small>+ IVA</small></span>
+                <a href="#contacto" class="btn-buy">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- HOGAR -->
+      <div class="product-category" id="hogar">
+        <h3 class="cat-title"><span class="cat-dot"></span> Hogar &amp; Limpieza</h3>
+        <div class="product-grid">
+
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="images/detergente.png" alt="Detergente Austral 1.5 lts" loading="lazy" />
+              <div class="product-badge">Importado</div>
+            </div>
+            <div class="product-info">
+              <h4>Detergente Austral</h4>
+              <p class="product-desc">Formato 1.5 litros — máxima limpieza</p>
+              <div class="product-footer">
+                <span class="product-price">$700 <small>+ IVA</small></span>
+                <a href="#contacto" class="btn-buy">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- DESPENSA -->
+      <div class="product-category" id="despensa">
+        <h3 class="cat-title"><span class="cat-dot"></span> Despensa</h3>
+        <div class="product-grid">
+
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="images/azucar.png" alt="Azúcar La Campechana" loading="lazy" />
+              <div class="product-badge">Importado</div>
+            </div>
+            <div class="product-info">
+              <h4>Azúcar La Campechana</h4>
+              <p class="product-desc">Azúcar de importación — calidad garantizada</p>
+              <div class="product-footer">
+                <span class="product-price">$580 <small>+ IVA</small></span>
+                <a href="#contacto" class="btn-buy">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section class="about-section" id="nosotros">
+    <div class="container about-inner">
+      <div class="about-text">
+        <p class="section-label">Quiénes somos</p>
+        <h2 class="section-title">Comercializadora<br /><span class="gold">Nuevo Sol</span></h2>
+        <p>Somos una empresa dedicada a la importación y distribución mayorista de productos de calidad. Ofrecemos una amplia gama de productos alimenticios y del hogar al mejor precio del mercado.</p>
+        <p>Trabajamos con stock permanente para garantizar abastecimiento continuo a nuestros clientes, ya sean negocios, supermercados, botillerías o particulares que compren en cantidad.</p>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-num gold">10+</span>
+            <span class="stat-label">Productos</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num gold">100%</span>
+            <span class="stat-label">Importados</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num gold">24h</span>
+            <span class="stat-label">Respuesta</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-img-wrap">
+        <img src="images/hero.png" alt="Productos Nuevo Sol" />
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="contact-section" id="contacto">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Escríbenos</p>
+        <h2 class="section-title">Contáctanos</h2>
+        <p class="section-sub">¿Interesado en nuestros productos? Cotiza ahora y recibe precios especiales por volumen.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <span class="contact-icon">📱</span>
+          <h4>WhatsApp</h4>
+          <p>Cotiza directamente por WhatsApp, respuesta rápida y efectiva.</p>
+          <a href="https://wa.me/56912345678?text=Hola%2C%20me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20productos" class="btn btn-primary" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+        </div>
+        <div class="contact-card">
+          <span class="contact-icon">✉️</span>
+          <h4>Correo</h4>
+          <p>Envíanos un correo para consultas, pedidos y listas de precios completas.</p>
+          <a href="mailto:contacto@nuevosol.cl" class="btn btn-outline">Enviar correo</a>
+        </div>
+        <div class="contact-card">
+          <span class="contact-icon">📍</span>
+          <h4>Ubicación</h4>
+          <p>Chile — distribución a nivel nacional. Consulta cobertura en tu zona.</p>
+          <a href="#contacto" class="btn btn-outline">Consultar zona</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-sol">☀</span>
+        <span class="brand-text">Nuevo <strong>Sol</strong></span>
+      </div>
+      <p class="footer-copy">© 2024 Comercializadora Nuevo Sol · Todos los derechos reservados · Precios + IVA</p>
+      <div class="footer-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/56912345678?text=Hola%2C%20me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20productos" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
