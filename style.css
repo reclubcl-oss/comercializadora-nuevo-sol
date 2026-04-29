@@ -259,9 +259,9 @@ a    { text-decoration: none; color: inherit; }
   aspect-ratio: 4/3; overflow: hidden; background: var(--cream-2);
   display: flex; align-items: center; justify-content: center;
 }
-.pcard-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
-.pcard-img-fit img { object-fit: cover; }
-.pcard:hover .pcard-img img { transform: scale(1.04); }
+.pcard-img img { width: 100%; height: 100%; object-fit: contain; padding: 8px; transition: transform .4s ease; }
+.pcard-img-cover img { object-fit: cover; padding: 0; }
+.pcard:hover .pcard-img img { transform: scale(1.06); }
 
 .pcard-body { padding: 14px 16px 16px; display: flex; flex-direction: column; flex: 1; gap: 4px; border-top: 1px solid rgba(0,0,0,.05); }
 .pcard-brand { font-family: var(--font-m); font-size: .65rem; font-weight: 700; color: var(--gray); text-transform: uppercase; letter-spacing: .8px; }
@@ -274,10 +274,87 @@ a    { text-decoration: none; color: inherit; }
 .pcard-btn {
   background: var(--green); color: var(--white); font-family: var(--font-m); font-size: .75rem;
   font-weight: 700; padding: 7px 14px; border-radius: 50px; transition: all var(--t); white-space: nowrap;
+  border: none; cursor: pointer; display: inline-block; text-decoration: none;
 }
 .pcard-btn:hover { background: var(--green-2); transform: translateY(-1px); }
 .pcard-dark .pcard-btn { background: var(--sun); color: var(--dark); }
 .pcard-dark .pcard-btn:hover { background: var(--sun-lt); }
+
+/* ══ MODAL PRODUCTO ══════════════════════════════════════════ */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 9000;
+  background: rgba(10,25,10,.75); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px; opacity: 0; pointer-events: none;
+  transition: opacity .3s ease;
+}
+.modal-overlay.active { opacity: 1; pointer-events: all; }
+.modal-card {
+  background: var(--white); border-radius: 20px; overflow: hidden;
+  width: 100%; max-width: 420px; box-shadow: 0 24px 80px rgba(0,0,0,.35);
+  position: relative; transform: translateY(30px) scale(.96);
+  transition: transform .35s cubic-bezier(.22,.68,0,1.2);
+  display: flex; flex-direction: column;
+}
+.modal-overlay.active .modal-card { transform: translateY(0) scale(1); }
+.modal-close {
+  position: absolute; top: 12px; right: 12px; z-index: 10;
+  background: rgba(255,255,255,.9); border: none; cursor: pointer;
+  width: 36px; height: 36px; border-radius: 50%; display: flex;
+  align-items: center; justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15); color: var(--dark);
+  transition: background var(--t), transform var(--t);
+}
+.modal-close:hover { background: var(--cream-2); transform: scale(1.1); }
+.modal-img-wrap {
+  background: linear-gradient(135deg, var(--cream) 0%, var(--cream-2) 100%);
+  display: flex; align-items: center; justify-content: center;
+  min-height: 220px; max-height: 280px; overflow: hidden; padding: 20px;
+}
+.modal-img-wrap img {
+  max-width: 100%; max-height: 240px; object-fit: contain;
+  transition: transform .4s ease;
+}
+.modal-overlay.active .modal-img-wrap img { transform: scale(1); }
+.modal-body {
+  padding: 24px 28px 28px; display: flex; flex-direction: column; gap: 10px;
+}
+.modal-brand-tag {
+  font-family: var(--font-m); font-size: .65rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1px; color: var(--gray);
+}
+.modal-product-name {
+  font-family: var(--font-h); font-size: 1.5rem; font-weight: 700;
+  color: var(--forest); line-height: 1.2;
+}
+.modal-price-tag {
+  font-family: var(--font-m); font-size: 1.8rem; font-weight: 800;
+  color: var(--green); letter-spacing: -.5px;
+}
+.modal-price-tag small { font-size: .9rem; font-weight: 400; color: var(--gray); }
+.modal-hint {
+  font-size: .82rem; color: var(--gray); font-family: var(--font-b);
+  line-height: 1.5;
+}
+.modal-wa-btn {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  background: #25D366; color: #fff; font-family: var(--font-m);
+  font-size: 1rem; font-weight: 700; padding: 14px 24px;
+  border-radius: 50px; text-decoration: none; margin-top: 6px;
+  transition: background var(--t), transform var(--t), box-shadow var(--t);
+  box-shadow: 0 4px 20px rgba(37,211,102,.35);
+}
+.modal-wa-btn:hover {
+  background: #1EBE5A; transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(37,211,102,.45);
+}
+@media (max-width: 480px) {
+  .modal-card { max-width: 100%; border-radius: 16px 16px 0 0; }
+  .modal-overlay { align-items: flex-end; padding: 0; }
+  .modal-img-wrap { min-height: 180px; }
+  .modal-product-name { font-size: 1.2rem; }
+  .modal-price-tag { font-size: 1.4rem; }
+}
 
 /* ══════════════════════════════
    SECTION HEADERS (shared)
